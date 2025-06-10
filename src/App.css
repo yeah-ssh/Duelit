@@ -1,38 +1,121 @@
+/* App.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background:rgb(235, 241, 174);  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Wallet Connection and Play Section */
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover {
+  background-color: #45a049;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.claim-button {
+  background-color: #ff9800;
+}
+
+.claim-button:hover {
+  background-color: #e68900;
+}
+
+/* Game Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.card {
+  width: 80px;
+  height: 120px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.card:hover {
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card.flipped {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.card.matched {
+  background-color: #ff9800;
+  color: #fff;
+  cursor: default;
+}
+
+/* Scores Section */
+.scores {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.scores p {
+  margin: 5px 0;
+}
+
+/* Game Over Section */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 10px 0;
 }

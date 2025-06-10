@@ -223,5 +223,4 @@ const finalizeGame = async () => {
     </div>
   );
 }
-
 export default App;
